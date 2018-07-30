@@ -1,0 +1,30 @@
+name       : partclone
+version    : 0.3.11
+release    : 1
+source     :
+    - git|https://github.com/Thomas-Tsai/partclone.git : 0.3.11
+license    : GPL-2.0-only
+component  : system.utils
+summary    : Partclone provides utilities to save and restore used blocks on a partition.
+description: |
+    Partclone provides utilities to save and restore used blocks on a partition and is designed for higher compatibility of the file system by using existing libraries, e.g. e2fslibs is used to read and write the ext2 partition.
+builddeps  :
+    - pkgconfig(ext2fs)
+    - pkgconfig(fuse)
+    - pkgconfig(libntfs-3g)
+    - pkgconfig(uuid)
+setup      : |
+    ./autogen
+    %configure \
+        --enable-btrfs \
+        --enable-exfat \
+        --enable-extfs \
+        --enable-fat \
+        --enable-f2fs \
+        --enable-hfsp \
+        --enable-ntfs \
+        --enable-xfs
+build      : |
+    %make
+install    : |
+    %make_install

@@ -1,0 +1,37 @@
+<PISI>
+    <Source>
+        <Name>partclone</Name>
+        <Packager>
+            <Name>Philipp Trulson</Name>
+            <Email>philipp@trulson.de</Email>
+        </Packager>
+        <License>GPL-2.0-only</License>
+        <PartOf>system.utils</PartOf>
+        <Summary xml:lang="en">Partclone provides utilities to save and restore used blocks on a partition.</Summary>
+        <Description xml:lang="en">Partclone provides utilities to save and restore used blocks on a partition and is designed for higher compatibility of the file system by using existing libraries, e.g. e2fslibs is used to read and write the ext2 partition.
+</Description>
+        <Archive type="binary" sha1sum="79eb0752a961b8e0d15c77d298c97498fbc89c5a">https://solus-project.com/sources/README.Solus</Archive>
+    </Source>
+    <Package>
+        <Name>partclone</Name>
+        <Summary xml:lang="en">Partclone provides utilities to save and restore used blocks on a partition.</Summary>
+        <Description xml:lang="en">Partclone provides utilities to save and restore used blocks on a partition and is designed for higher compatibility of the file system by using existing libraries, e.g. e2fslibs is used to read and write the ext2 partition.
+</Description>
+        <PartOf>system.utils</PartOf>
+        <Files>
+            <Path fileType="executable">/usr/sbin</Path>
+            <Path fileType="localedata">/usr/share/locale</Path>
+            <Path fileType="man">/usr/share/man</Path>
+            <Path fileType="data">/usr/share/partclone</Path>
+        </Files>
+    </Package>
+    <History>
+        <Update release="1">
+            <Date>2018-06-10</Date>
+            <Version>0.3.11</Version>
+            <Comment>Packaging update</Comment>
+            <Name>Philipp Trulson</Name>
+            <Email>philipp@trulson.de</Email>
+        </Update>
+    </History>
+</PISI>
